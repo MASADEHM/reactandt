@@ -4,7 +4,8 @@ import { IUsers } from "../interfaces/user.interface";
 
 const url='https://dummyjson.com/users';
 export const userService={
-    getAll:()=>{
-        return axiosInstance.get<IUsers>(url).then(d=>d);
+    getAll: async ()=>{
+        return await axiosInstance.get<IUsers>(url).then(d=>d);
     }
+    
 }
